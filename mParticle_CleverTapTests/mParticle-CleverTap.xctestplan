@@ -22,7 +22,8 @@
       "containerPath" : "container:mParticle-CleverTap.xcodeproj",
       "identifier" : "DBB01A5A1DC1478A00A7B188",
       "name" : "mParticle-CleverTap"
-    }
+    },
+    "testExecutionOrdering" : "random"
   },
   "testTargets" : [
     {
