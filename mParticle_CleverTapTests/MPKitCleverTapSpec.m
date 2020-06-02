@@ -38,6 +38,33 @@ describe(@"a mParticle CleverTap integration", ^{
             expect(clevertapKit.configuration).to(equal(config));
             expect(clevertapKit.providerKitInstance).to(beAKindOf([CleverTap class]));
         });
+        
+        it(@"handles push notifications clicks", ^{
+            
+            id mockCleverTap = OCMStrictClassMock([CleverTap class]);
+            
+            id mockNotificationCenter = OCMClassMock([UNUserNotificationCenter class]);
+            id mockNotificationResponse = OCMClassMock([UNNotificationResponse class]);
+
+            [[mockCleverTap expect] handlePushNotification:[OCMArg any] openDeepLinksInForeground:[OCMArg any]];
+            
+            [clevertapKit userNotificationCenter:mockNotificationCenter didReceiveNotificationResponse:mockNotificationResponse];
+            
+            OCMVerifyAll(mockCleverTap);
+        });
+        
+        it(@"handles push notification actions", ^{
+            
+            [CleverTap setCredentialsWithAccountID:@"12345" andToken:@"54321"];
+            
+            id mockCleverTap = OCMPartialMock([CleverTap sharedInstance]);
+            
+            OCMExpect([mockCleverTap handleNotificationWithData:[OCMArg any]]);
+            
+            [clevertapKit handleActionWithIdentifier:[OCMArg any] forRemoteNotification:[OCMArg any]];
+            
+            OCMVerifyAll(mockCleverTap);
+        });
     });
 });
 
