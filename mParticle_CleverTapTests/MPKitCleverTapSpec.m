@@ -234,6 +234,24 @@ describe(@"a mParticle CleverTap integration", ^{
             OCMVerifyAll(mockCleverTap);
         });
         
+        it(@"verifies charged event is fired on Purchase Action Events", ^{
+            [CleverTap setCredentialsWithAccountID:@"12345" andToken:@"54321"];
+            
+            id mockCleverTap = OCMPartialMock([CleverTap sharedInstance]);
+            
+            OCMExpect([mockCleverTap recordChargedEventWithDetails:[OCMArg any] andItems:[OCMArg any]]);
+            
+            #pragma clang diagnostic push
+            #pragma clang diagnostic ignored "-Wdeprecated"
+            
+            MPCommerceEvent *niceEvent = [[MPCommerceEvent alloc] initWithAction:MPCommerceEventActionPurchase];
+            [clevertapKit logCommerceEvent:niceEvent];
+            
+            #pragma clang diagnostic pop
+            
+            OCMVerifyAll(mockCleverTap);
+        });
+        
         it(@"verifies events are logged", ^{
             [CleverTap setCredentialsWithAccountID:@"12345" andToken:@"54321"];
             
