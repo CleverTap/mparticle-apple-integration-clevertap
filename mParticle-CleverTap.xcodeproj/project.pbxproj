@@ -41,6 +41,7 @@
 		DBB01A661DC1480700A7B188 /* MPKitCleverTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPKitCleverTap.h; sourceTree = "<group>"; };
 		DBB01A671DC1480700A7B188 /* MPKitCleverTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPKitCleverTap.m; sourceTree = "<group>"; };
 		DBB01A6A1DC1491D00A7B188 /* mParticle_Apple_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = mParticle_Apple_SDK.framework; path = Carthage/Build/iOS/mParticle_Apple_SDK.framework; sourceTree = "<group>"; };
+		F94316A12486BD3100FDFBA6 /* mParticle-CleverTap.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "mParticle-CleverTap.xctestplan"; sourceTree = "<group>"; };
 		F9DC910C2486B42B00A94558 /* mParticle_CleverTapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mParticle_CleverTapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9DC91192486B44E00A94558 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9DC911C2486B52000A94558 /* MPKitCleverTapSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPKitCleverTapSpec.m; sourceTree = "<group>"; };
@@ -116,6 +117,7 @@
 			children = (
 				F9DC911C2486B52000A94558 /* MPKitCleverTapSpec.m */,
 				F9DC91192486B44E00A94558 /* Info.plist */,
+				F94316A12486BD3100FDFBA6 /* mParticle-CleverTap.xctestplan */,
 			);
 			path = mParticle_CleverTapTests;
 			sourceTree = "<group>";
