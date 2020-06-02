@@ -1,0 +1,18 @@
+[submodule "Vendors/SDWebImage"]
+	path = Vendors/SDWebImage
+	url = https://github.com/SDWebImage/SDWebImage.git
+[submodule "Vendors/Quick"]
+	path = Vendors/Quick
+	url = https://github.com/Quick/Quick.git
+[submodule "Vendors/Nimble"]
+	path = Vendors/Nimble
+	url = https://github.com/Quick/Nimble.git
+[submodule "Vendors/OCMock"]
+	path = Vendors/OCMock
+	url = https://github.com/erikdoe/ocmock.git
+[submodule "Vendors/mParticle"]
+	path = Vendors/mParticle
+	url = https://github.com/mParticle/mparticle-apple-sdk.git
+[submodule "Vendors/CleverTap"]
+	path = Vendors/CleverTap
+	url = https://github.com/CleverTap/clevertap-ios-sdk
