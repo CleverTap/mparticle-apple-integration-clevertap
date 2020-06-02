@@ -12,19 +12,32 @@ QuickSpecBegin(MPKitCleverTapSpec)
 describe(@"a mParticle CleverTap integration", ^{
     
     context(@"conforming to MPKitProtocol", ^{
-       
-        it(@"is started on launching with Configuration", ^{
-            MPKitCleverTap *clevertapKit = [MPKitCleverTap new];
-            [clevertapKit didFinishLaunchingWithConfiguration:@{ @"AccountID":@"12345", @"AccountToken":@"54321" }];
-            expect(clevertapKit.started).to(beTrue());
+        
+        __block MPKitCleverTap *clevertapKit;
+        beforeEach(^{
+            clevertapKit = [MPKitCleverTap new];
+        });
+        
+        afterEach(^{
+            clevertapKit = nil;
         });
         
         it(@"is not started with empty Configuration", ^{
-            MPKitCleverTap *clevertapKit = [MPKitCleverTap new];
             [clevertapKit didFinishLaunchingWithConfiguration:@{}];
             expect(clevertapKit.started).toNot(beTrue());
         });
         
+        it(@"verifies properties are set correctly", ^{
+            
+            NSDictionary *config = @{ @"AccountID": @"12345", @"AccountToken": @"54321" };
+            
+            [clevertapKit didFinishLaunchingWithConfiguration:config];
+            
+            expect(clevertapKit.started).to(beTrue());
+            expect(clevertapKit.launchOptions).to(beNil());
+            expect(clevertapKit.configuration).to(equal(config));
+            expect(clevertapKit.providerKitInstance).to(beAKindOf([CleverTap class]));
+        });
     });
 });
 
