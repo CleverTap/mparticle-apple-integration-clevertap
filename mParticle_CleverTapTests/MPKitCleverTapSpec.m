@@ -126,18 +126,13 @@ describe(@"a mParticle CleverTap integration", ^{
             OCMVerifyAll(mockCleverTap);
         });
         
-//        it(@"verifies location is set", ^{
-//
-//            id mockCleverTap = OCMStrictClassMock([CleverTap class]);
-//
-//            CLLocation *niceLocation = [[CLLocation alloc] initWithLatitude:19 longitude:72];
-//
-//            [(CleverTap *)[mockCleverTap expect] setLocation:niceLocation.coordinate];
-//
-//            [clevertapKit setLocation:niceLocation];
-//
-//            OCMVerifyAll(mockCleverTap);
-//        });
+        it(@"verifies location is set", ^{
+            
+            CLLocation *mockLocation = OCMClassMock([CLLocation class]);
+            MPKitExecStatus *status = [clevertapKit setLocation:mockLocation];
+
+            expect(@(status.returnCode)).to(equal(MPKitReturnCodeSuccess));
+        });
         
         it(@"verifies user attributes are set via profile push", ^{
             [CleverTap setCredentialsWithAccountID:@"12345" andToken:@"54321"];
