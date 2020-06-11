@@ -1,0 +1,28 @@
+{
+  "configurations" : [
+    {
+      "id" : "3F1DA8BB-3481-43B7-B76C-56B8ED1B0B4F",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:mParticle-CleverTap.xcodeproj",
+      "identifier" : "DBB01A5A1DC1478A00A7B188",
+      "name" : "mParticle-CleverTap"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:mParticle-CleverTap.xcodeproj",
+        "identifier" : "F90C7DF72492BEC3006EF6E3",
+        "name" : "mParticle_CleverTapTests"
+      }
+    }
+  ],
+  "version" : 1
+}
