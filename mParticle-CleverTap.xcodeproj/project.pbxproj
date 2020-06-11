@@ -18,6 +18,9 @@
 		DBB01A681DC1480700A7B188 /* MPKitCleverTap.h in Headers */ = {isa = PBXBuildFile; fileRef = DBB01A661DC1480700A7B188 /* MPKitCleverTap.h */; };
 		DBB01A691DC1480700A7B188 /* MPKitCleverTap.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB01A671DC1480700A7B188 /* MPKitCleverTap.m */; };
 		DBB01A6B1DC1491D00A7B188 /* mParticle_Apple_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB01A6A1DC1491D00A7B188 /* mParticle_Apple_SDK.framework */; };
+		F92D24FD2492BCC6000A4491 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92D24FA2492BCC6000A4491 /* OCMock.framework */; platformFilter = ios; };
+		F92D24FE2492BCC6000A4491 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92D24FB2492BCC6000A4491 /* Quick.framework */; platformFilter = ios; };
+		F92D24FF2492BCC6000A4491 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92D24FC2492BCC6000A4491 /* Nimble.framework */; platformFilter = ios; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +49,9 @@
 		DBB01A661DC1480700A7B188 /* MPKitCleverTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPKitCleverTap.h; sourceTree = "<group>"; };
 		DBB01A671DC1480700A7B188 /* MPKitCleverTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPKitCleverTap.m; sourceTree = "<group>"; };
 		DBB01A6A1DC1491D00A7B188 /* mParticle_Apple_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = mParticle_Apple_SDK.framework; path = Carthage/Build/iOS/mParticle_Apple_SDK.framework; sourceTree = "<group>"; };
+		F92D24FA2492BCC6000A4491 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = Carthage/Build/iOS/OCMock.framework; sourceTree = "<group>"; };
+		F92D24FB2492BCC6000A4491 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		F92D24FC2492BCC6000A4491 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F92D24FD2492BCC6000A4491 /* OCMock.framework in Frameworks */,
+				F92D24FE2492BCC6000A4491 /* Quick.framework in Frameworks */,
+				F92D24FF2492BCC6000A4491 /* Nimble.framework in Frameworks */,
 				D071FD9C21A3AB600060F803 /* CleverTapSDK.framework in Frameworks */,
 				D076C322218E413700185E1A /* mParticle_CleverTap.framework in Frameworks */,
 				D071FD9D21A3AB630060F803 /* mParticle_Apple_SDK.framework in Frameworks */,
@@ -115,6 +124,9 @@
 		FF13226121878D9C002AA653 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F92D24FC2492BCC6000A4491 /* Nimble.framework */,
+				F92D24FA2492BCC6000A4491 /* OCMock.framework */,
+				F92D24FB2492BCC6000A4491 /* Quick.framework */,
 				D071FD9A21A3A9700060F803 /* XCTest.framework */,
 			);
 			name = Frameworks;
