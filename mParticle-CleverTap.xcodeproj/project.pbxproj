@@ -3,17 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D02BDC6521A3B03100209F59 /* CleverTapSDK.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D076C317218E3DEE00185E1A /* CleverTapSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D02BDC6621A3B03500209F59 /* mParticle_Apple_SDK.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DBB01A6A1DC1491D00A7B188 /* mParticle_Apple_SDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D071FD9C21A3AB600060F803 /* CleverTapSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D076C317218E3DEE00185E1A /* CleverTapSDK.framework */; };
-		D071FD9D21A3AB630060F803 /* mParticle_Apple_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB01A6A1DC1491D00A7B188 /* mParticle_Apple_SDK.framework */; };
+		D02BDC6521A3B03100209F59 /* CleverTapSDK.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D076C317218E3DEE00185E1A /* CleverTapSDK.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D02BDC6621A3B03500209F59 /* mParticle_Apple_SDK.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DBB01A6A1DC1491D00A7B188 /* mParticle_Apple_SDK.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D071FD9C21A3AB600060F803 /* CleverTapSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D076C317218E3DEE00185E1A /* CleverTapSDK.framework */; platformFilter = ios; };
+		D071FD9D21A3AB630060F803 /* mParticle_Apple_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB01A6A1DC1491D00A7B188 /* mParticle_Apple_SDK.framework */; platformFilter = ios; };
 		D076C318218E3DEE00185E1A /* CleverTapSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D076C317218E3DEE00185E1A /* CleverTapSDK.framework */; };
-		D076C320218E413700185E1A /* mParticle_CleverTapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D076C31F218E413700185E1A /* mParticle_CleverTapTests.m */; };
-		D076C322218E413700185E1A /* mParticle_CleverTap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB01A5B1DC1478A00A7B188 /* mParticle_CleverTap.framework */; };
+		D076C320218E413700185E1A /* mParticle_CleverTapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D076C31F218E413700185E1A /* mParticle_CleverTapTests.m */; platformFilter = ios; };
+		D076C322218E413700185E1A /* mParticle_CleverTap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB01A5B1DC1478A00A7B188 /* mParticle_CleverTap.framework */; platformFilter = ios; };
 		DBB01A601DC1478A00A7B188 /* mParticle_CleverTap.h in Headers */ = {isa = PBXBuildFile; fileRef = DBB01A5E1DC1478A00A7B188 /* mParticle_CleverTap.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DBB01A681DC1480700A7B188 /* MPKitCleverTap.h in Headers */ = {isa = PBXBuildFile; fileRef = DBB01A661DC1480700A7B188 /* MPKitCleverTap.h */; };
 		DBB01A691DC1480700A7B188 /* MPKitCleverTap.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB01A671DC1480700A7B188 /* MPKitCleverTap.m */; };
@@ -193,7 +193,7 @@
 				};
 			};
 			buildConfigurationList = DBB01A551DC1478A00A7B188 /* Build configuration list for PBXProject "mParticle-CleverTap" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -265,7 +265,11 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = mParticle_CleverTapTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.clevertap.mParticle-CleverTapTests";
@@ -292,7 +296,11 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = mParticle_CleverTapTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.clevertap.mParticle-CleverTapTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -433,10 +441,15 @@
 				INFOPLIST_FILE = "mParticle-CleverTap/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mparticle.mParticle-CleverTap";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 			};
 			name = Debug;
 		};
@@ -456,10 +469,15 @@
 				INFOPLIST_FILE = "mParticle-CleverTap/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mparticle.mParticle-CleverTap";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 			};
 			name = Release;
 		};
