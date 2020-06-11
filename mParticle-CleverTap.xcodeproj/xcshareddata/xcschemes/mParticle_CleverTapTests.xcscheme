@@ -17,7 +17,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D076C31C218E413700185E1A"
+               BlueprintIdentifier = "F90C7DF72492BEC3006EF6E3"
                BuildableName = "mParticle_CleverTapTests.xctest"
                BlueprintName = "mParticle_CleverTapTests"
                ReferencedContainer = "container:mParticle-CleverTap.xcodeproj">
